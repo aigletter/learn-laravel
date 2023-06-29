@@ -18,19 +18,19 @@ class MathController
     public function sum($a, $b)
     {
         /** @var CacheManager $cache */
-        /*$cache = App::get('cache');
+        $cache = App::get('cache');
         $cache->delete('result');
 
-        if ($cache->has('result')) {
+        /*if ($cache->has('result')) {
             $result = $cache->get('result');
         } else {
             // Способ 1 - используя функцию-хелпер app
             $app = app();
             $math1 = $app->get('math');
-            //$math2 = app('math');
+            $math2 = app('math');
 
             // Способ 2 - используя фасад App
-            //$math3 = App::get('math');
+            $math3 = App::get('math');
 
             $math4 = $app->get('math');
 
@@ -40,6 +40,7 @@ class MathController
         }*/
 
         $result = $this->math->sum($a, $b);
+
         return "Result $a + $b = " . $result;
     }
 }

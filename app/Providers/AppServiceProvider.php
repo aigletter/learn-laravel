@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Services\Math\Math;
 use Illuminate\Support\ServiceProvider;
+use Psr\Log\LoggerInterface;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -21,10 +22,6 @@ class AppServiceProvider extends ServiceProvider
         /*$this->app->bind('math', function () {
             return new Math();
         });*/
-
-        $this->app->singleton('math', function () {
-            return new Math();
-        });
     }
 
     /**
